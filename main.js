@@ -11,3 +11,15 @@ function getComputerSelection(arr) {
 }
 
 const computerSelection = getComputerSelection(array);
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "paper") console.log("You Lose!");
+    else if (playerSelection === "rock" && computerSelection === "scissors") console.log("You win!");
+    else if (playerSelection === "scissors" && computerSelection === "rock") console.log("You Lose");
+    else if (playerSelection === "scissors" && computerSelection === "paper") console.log("You win!");
+    else if (playerSelection === "paper" && computerSelection === "scissors") console.log("You Lose");
+    else if (playerSelection === "paper" && computerSelection === "rock") console.log("You win!");
+}
+
+playRound(playerSelection, computerSelection);
+
