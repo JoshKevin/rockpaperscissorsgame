@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RockPaperAndScissorsGame</title>
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="titleContainer">
+        <h1 class="title">Rock Paper and Scissors</h1>
+        <p class="story">Humans have been decimated by Aliens. The aliens have gotten rid of everything humans can use
+            as a weapon against them. And now they want us to play a humiliating Rock Paper and Scissors against each
+            other. The winner gets to join them in their conquest of other worlds, and the loser gets to suffer in the
+            now barren wasteland of Earth. Your fate depends on your choices. What do you choose?</p>
+    </div>
+
+    <div id="startContainer">
+        <button id="startbtn">Start Game!</button>
+    </div>
+
+
+    <div id="result" class="hidden" style="display:none;">
+        <p class="playerChoice" id>You Chose:</p>
+        <p class="computerChoice">They Chose:</p>
+        <p class="winner">Who won:</p>
+        <p class="round">Round: </p>
+    </div>
+    <div id="choices" class="hidden" style="display:none;">
+        <button class="choicebtn" id="paper">Paper</button>
+        <button class="choicebtn" id="rock">Rock</button>
+        <button class="choicebtn" id="scissors">Scissors</button>
+    </div>
+
 </body>
-    <script src="main.js"></script>
+
 </html>
