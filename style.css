@@ -15,13 +15,6 @@ div .story {
 
 
 
-.result {
-    padding-left: 300px;
-}
-
-.choices {
-    display: flex;
-    justify-content: space-around;
-    padding-left: 400px;
-    padding-right: 400px;
-}
+/* .resultPanel {
+    margin: auto;
+} */

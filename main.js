@@ -1,15 +1,27 @@
-const result = document.querySelector('#result');
-result.style.display = 'none';
+let resultPanel = document.querySelector('#resultPanel');
+let compChoices = ['Rock', 'Paper', 'Scissors'];
+let playerChoicePanel = document.querySelector('#playerChoicePanel');
+let compChoicePanel = document.querySelector('#compChoicePanel');
+let winner = document.querySelector('#winner');
+let round = document.querySelector('#round');
+let choicesPanel = document.querySelector('#choicesPanel');
+let choicebtn = document.querySelectorAll('.choicebtn');
+i = 0;
 
-const choices = document.querySelector('#choices');
-choices.style.display = 'none';
+resultPanel.setAttribute('style', 'margin-left:450px;')
+choicesPanel.setAttribute('style', 'display: flex; justify-content: space-around;')
 
-const startbtn = document.querySelector('#startbtn');
-const hidden = document.querySelectorAll('.hidden');
-startbtn.addEventListener('click', () => {
-    startbtn.style.display = 'none';
-    hidden.forEach((hidden) => {
-        hidden.style.display = 'block';
+choicebtn.forEach((choicebtn) => {
+    choicebtn.addEventListener('click', () => {
+        playerChoice = choicebtn.textContent;
+        playerChoicePanel.textContent = "You Chose: " + `${playerChoice}`;
+        let compChoice = compChoices[Math.floor(Math.random() * compChoices.length)];
+        compChoicePanel.textContent = "They Chose: " + `${compChoice}`;
+        if (playerChoice === compChoice) winner.textContent = "Who Won: Draw!";
+        else if ((playerChoice === "Rock" && compChoice === "Scissors") || (playerChoice === "Paper" && compChoice === "Rock") || (playerChoice === "Scissors" && compChoice === "Paper")) winner.textContent = "Who Won: We Won!";
+        else winner.textContent = "Who Won: They Won"
+        i++;
+        round.textContent = "Round: " + `${i}`;
     });
 });
 
